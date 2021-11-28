@@ -31,3 +31,13 @@ labelHeading.pack()
 
 # add the images from the main dirrectory
 dice = ['die1.png', 'die2.png', 'die3.png', 'die4.png', 'die5.png', 'die6.png']
+
+# simulate the dice with random integers between 0 and 6 and generate an image for the user
+dicePicture = ImageTk.PhotoImage(Image.open(random.choice(dice)))
+
+# create the label for the image
+labelImage = tkinter.Label(root, image=dicePicture)
+labelImage.image = dicePicture
+
+# pack the widnget in the parent widget
+labelImage.pack(expand=True)
